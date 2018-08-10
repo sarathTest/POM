@@ -168,7 +168,8 @@ public class SeMethods extends Reporter implements WdMethods{
 		try {
 			bReturn =  driver.getTitle();
 		} catch (WebDriverException e) {
-			reportStep("Unknown Exception Occured While fetching Title", "FAIL");
+			// Added by Team Lead
+			reportStep(e.getMessage(), "FAIL");
 		} 
 		return bReturn;
 	}
